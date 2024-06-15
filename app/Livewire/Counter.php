@@ -13,14 +13,10 @@ class Counter extends Component
     {
         return view('livewire.counter');
     }
+
+    #[On('echo:test,Test')]
     public function increment()
     {
         $this->counter++;
-    }
-
-    #[On('echo:test,Test')]
-    public function listen()
-    {
-        $this->increment();
     }
 }
